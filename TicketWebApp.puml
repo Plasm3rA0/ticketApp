@@ -1,0 +1,64 @@
+@startuml ticket
+
+hide empty members
+
+class Company{
+    id: Long
+    name: String
+    size: Integer    
+    creationDate: Timestamp
+    updateDate: Timestamp
+}
+
+class Department{
+    id: Long
+    name: String
+    size: Integer
+    creationDate: Timestamp
+    updateDate: Timestamp
+}
+
+class Employee{
+    dni: String
+    name: String
+    surname: String
+    birthDate: Date
+    username: String
+    password: String
+    creationDate: Timestamp
+    updateDate: Timestamp
+}
+
+class Project{
+    id: Long
+    name: String
+    description: String
+    creationDate: Timestamp
+    updateDate: Timestamp
+}
+
+class Ticket{
+    id: Long
+    title: String
+    description: String
+    hurry: Integer
+    creationDate: Timestamp
+    updateDate: Timestamp
+}
+
+class User{
+    id: Long
+    username: String
+    password: String
+}
+
+Ticket -- User
+Ticket - Employee
+Employee - Department
+Employee - Depa
+Project - Ticket
+Project -- Company
+Company - User
+
+
+@enduml

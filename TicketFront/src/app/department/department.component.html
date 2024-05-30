@@ -1,0 +1,8 @@
+@for (d of department; track d.name) {
+<section>
+    <h2>{{d.name}}</h2>
+    <p>Size: {{d.size}}</p>
+    <p>Enabled: {{d.isEnabled}}</p>
+    <button (click)="d.isEnabled = !d.isEnabled" >{{d.isEnabled ? "Disable" : "Enable"}}</button>
+</section>
+}
